@@ -6,6 +6,7 @@ import android.support.design.widget.BottomSheetBehavior
 import android.util.Log
 import android.view.View
 import android.widget.RelativeLayout
+import android.widget.Toast
 import kotlinx.android.synthetic.main.bottom_sheet.*
 import kotlinx.android.synthetic.main.btn_layout.*
 
@@ -36,19 +37,24 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 when(newState) {
                     BottomSheetBehavior.STATE_COLLAPSED -> {
                         Log.i("BSB", "Callapsed")
+                        Toast.makeText(this@MainActivity, "Callapsed", Toast.LENGTH_SHORT).show()
                         bottomsSheetBehavior.peekHeight = 0
                     }
                     BottomSheetBehavior.STATE_EXPANDED -> {
                         Log.i("BSB", "EXPANDED")
+                        Toast.makeText(this@MainActivity, "EXPANDED", Toast.LENGTH_SHORT).show()
                     }
                     BottomSheetBehavior.STATE_DRAGGING -> {
                         Log.i("BSB", "Dragging")
+                        Toast.makeText(this@MainActivity, "Dragging", Toast.LENGTH_SHORT).show()
                     }
                     BottomSheetBehavior.STATE_HIDDEN -> {
                         Log.i("BSB", "Hidden")
+                        Toast.makeText(this@MainActivity, "Hidden", Toast.LENGTH_SHORT).show()
                     }
                     BottomSheetBehavior.STATE_SETTLING -> {
                         Log.i("BSB", "Setting")
+                        Toast.makeText(this@MainActivity, "Setting", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
